@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WebsocketsApp</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>
+
+
+<script id="message_feed_template" type="text/x-handlebars-template">
+<p>
+	{{name}}
+	<a href="/messages/{{id}}">
+		{{message}}
+	</a>
+</p>
+</script> 

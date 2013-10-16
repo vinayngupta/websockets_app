@@ -1,0 +1,19 @@
+<h1>New Message</h1>
+
+<%= form_for @message do |m| %>
+  <p>
+    <%= m.label :name %><br>
+    <%= m.text_field :name, placeholder: 'User name' %>
+  </p>
+ 
+  <p>
+    <%= m.label :message %><br>
+    <%= m.text_area :message, placeholder: 'Message content' %>
+  </p>
+ 
+  <p>
+    <%= m.submit "Send message" %>
+  </p>
+
+  <% end %>
+

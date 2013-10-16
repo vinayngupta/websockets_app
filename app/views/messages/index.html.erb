@@ -1,0 +1,25 @@
+<h3>Shit just got real(time)</h3>
+
+	<%= form_for @message do |m| %>
+	  	<p>
+		    <%= m.label :name %><br>
+		    <%= m.text_field :name, placeholder: 'User name' %>
+		</p>
+		    <%= m.label :message %><br>
+		    <%= m.text_area :message, placeholder: 'Message content' %><br />
+	  		<%= m.submit "Send message" %>
+	  	</p>
+	    	
+	<% end %>
+
+
+	<h4>Message history</h4>
+		<div id="message_feed">
+				<% @messages.each do |m| %>
+					<p>
+						<%= m.name %>
+						<%= link_to m.message, message_path(m) %>	
+					</p>
+				<% end %>
+		</div>
+
